@@ -5,4 +5,4 @@ p1=$(echo $tx | jq '.vin[0].txinwitness[1]')
 p2=$(echo $tx | jq '.vin[1].txinwitness[1]')
 p3=$(echo $tx | jq '.vin[2].txinwitness[1]')
 p4=$(echo $tx | jq '.vin[3].txinwitness[1]')
-bitcoin-cli createmultisig 4 [$p1,$p2,$p3,$p4] "p2sh-segwit" | jq -r '.address'
+bitcoin-cli createmultisig 4 [$p1,$p2,$p3,$p4] | jq -r '.address'
